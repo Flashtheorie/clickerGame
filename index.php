@@ -9,8 +9,11 @@
 <body>
 	<div class="container" align="center">
 <h1><span id="monnaie"></span>€</h1>
-<div id="clickHere"><img src="img/dollar.png" alt=""></div>
+<small><div id="cps"></div></small>
 
+
+<div id="clickHere"><img src="img/dollar.png" alt=""></div>
+<div id="upgrades"></div>
 
 
 
