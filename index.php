@@ -12,7 +12,7 @@
 <small><div id="cps"></div></small>
 
 
-<div id="clickHere"><img src="img/dollar.png" alt=""></div>
+<div id="clickHere"></div>
 <div id="upgrades"></div>
 
 
