@@ -8,8 +8,9 @@
 </head>
 <body>
 	<div class="container" align="center">
-	<h1>test</h1>
-	<img src="img/dollar.png" alt="">
+<h1><span id="monnaie"></span>€</h1>
+<div id="clickHere"><img src="img/dollar.png" alt=""></div>
+
 
 
 
@@ -20,5 +21,6 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="jeu.js"></script>
 </body>
 </html>
