@@ -5,6 +5,8 @@ let valueOfADollar = cbPerClick;
 let coutUpgradeAuto = 5;
 let cbPerSecond = 0;
 
+
+
 function showDollar() {
 	let random = Math.floor(Math.random() * 100);
 	if (random > 90) 
