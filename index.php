@@ -14,7 +14,8 @@
 
 <div id="clickHere"></div>
 <div id="upgrades"></div>
-
+<hr>
+<div id="upgradesAuto"></div>
 
 
 
