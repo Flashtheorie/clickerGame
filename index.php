@@ -13,9 +13,9 @@
 
 
 <div id="clickHere"></div>
-<div id="upgrades"></div>
-<hr>
-<div id="upgradesAuto"></div>
+<span id="upgrades"></span>
+ / 
+<span id="upgradesAuto"></span>
 
 
 

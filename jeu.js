@@ -2,8 +2,8 @@ let monnaie = 0;
 let cbPerClick = 1;
 let coutUpgrade = 5;
 let valueOfADollar = cbPerClick;
-let coutUpgradeAuto = 50;
-
+let coutUpgradeAuto = 5;
+let cbPerSecond = 0;
 
 function showDollar() {
 	let random = Math.floor(Math.random() * 100);
@@ -42,7 +42,10 @@ else
 
 	if (monnaie >= coutUpgradeAuto) 
 	{
-		$("#upgradesAuto").html('<a href="#" id="upgrade2" class="btn btn-hg btn-danger">+' + cbPerClick +'€ / clic</a>').show();
+
+			$("#upgradesAuto").html('<button id="upgrade2" class="btn btn-hg btn-danger">+' + cbPerSecond +'€ / second</button>').show();
+		
+		
 	}
 else
 {
@@ -65,10 +68,25 @@ $("#upgrade1").click(function(){
 });
 
 
+
+$("#upgrade2").click(function(){
+
+cbPerSecond = cbPerSecond * 2;
+if (cbPerSecond == 0) { cbPerSecond = 1; };
+monnaie = monnaie - coutUpgradeAuto;
+coutUpgradeAuto = coutUpgradeAuto * 5;
+$("#upgradesAuto").hide();
+
+
+});
+
+
+
+
 }
 
 function showCps(){
-	$("#cps").html(cbPerClick + "€ / clic");
+	$("#cps").html(cbPerClick + "€ / clic <br>" + cbPerSecond + "€ /s");
 }
 
 
@@ -86,6 +104,12 @@ $("#clickHere").click(function(){
 
 }); // fin clickhere click
 
+
+setInterval(function(){
+   monnaie = monnaie + cbPerSecond;
+   
+   showMonnaie();
+}, 1000);
 
 
 
