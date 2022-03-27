@@ -20,6 +20,26 @@ function showDollar() {
 }
 function showMonnaie(){
 	$("#monnaie").html(monnaie);
+	if (monnaie >= coutUpgrade) {
+	$("#upgrades").html('<a href="#" id="upgrade1" class="btn btn-hg btn-primary">+' + cbPerClick +'€ / clic</a>').show();
+
+}
+else
+{
+	$("#upgrades").html(coutUpgrade + " pour débloquer").show();	
+}
+
+$("#upgrade1").click(function(){
+	cbPerClick = cbPerClick * 2;
+	monnaie = monnaie - coutUpgrade;
+	showMonnaie();
+	coutUpgrade = coutUpgrade * 5;
+
+	showCps();
+	$("#upgrades").hide();
+});
+
+
 }
 
 function showCps(){
@@ -38,17 +58,10 @@ $("#clickHere").click(function(){
 	showDollar();
 
 
-if (monnaie >= coutUpgrade) {
-	$("#upgrades").html('<a href="#" id="upgrade1" class="btn btn-hg btn-primary">+1€ / clic</a>');
-}
+
 }); // fin clickhere click
 
 
 
 
-$("#upgrade1").click(function(){
-	cbPerClick = cbPerClick + 1;
-	coutUpgrade = coutUpgrade * 5;
-	showCps();
-	$("#upgrades").html();
-});
+
